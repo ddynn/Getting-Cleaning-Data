@@ -6,9 +6,6 @@ The source data are from the Human Activity Recognition Using Smartphones Data S
 A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 Here are the data for the project: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-# About R script
-The run_analysis.R script does the following 5 steps  
-
 Preparation
 - load packaged needed
 - Download the dataset
@@ -21,6 +18,10 @@ Preparation
 * subject_train <- test/subject_train.txt : contains train data of 21/30 volunteer subjects being observed
 * x_train <- test/X_train.txt :contains recorded features train data
 * y_train <- test/y_train.txt :contains train data of activities’code labels
+
+
+# About R script
+The run_analysis.R script does the following 5 steps  
 
 # Start assignments
 1.Merges the training and the test sets to create one data set
