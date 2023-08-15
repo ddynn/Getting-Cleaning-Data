@@ -79,3 +79,5 @@ data_c$Subject <- as.factor(data_c$Subject)
 data_melt<- melt(data_c, id = c("Subject", "Activity"))
 #Subject-level tidy dataset
 data_tidy <- dcast(data_melt, Subject + Activity ~ variable, mean)
+
+write.table(data_tidy, "./FinalTidyData.txt", row.names = FALSE, quote = FALSE)
