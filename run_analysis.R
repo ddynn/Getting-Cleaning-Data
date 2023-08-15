@@ -40,10 +40,14 @@ s_test <- read.table(paste(sep = "", datadir, "/UCI HAR Dataset/test/subject_tes
 x_data <- rbind(x_train, x_test)
 y_data <- rbind(y_train, y_test)
 s_data <- rbind(s_train, s_test)
+data_c <- cbind(s_data, y_data, x_data)
+#Merged dataset is created by merging Subject, Y and X using cbind() function, 
+#which has 10299 obs and 563 variables
+
 
 #2. Extract data by cols & using descriptive name
 
-#fisrtly load feature & activity info for the V1-561 and measurments accordingly 
+#firstly load feature & activity info for the V1-561 and measurments accordingly 
 feature <- read.table(paste(sep = "", datadir, "/UCI HAR Dataset/features.txt"))
 
 # Read in activity labels
@@ -65,7 +69,6 @@ selectedColNames <- gsub("-std", "Std", selectedColNames)
 selectedColNames <- gsub("[-()]", "", selectedColNames)
 # extract data
 x_data <- x_data[selectedCols]
-data_c <- cbind(s_data, y_data, x_data)
 
 
 #3. Uses descriptive activity names to name the activities in the data set
